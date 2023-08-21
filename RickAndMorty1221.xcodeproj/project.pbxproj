@@ -14,7 +14,7 @@
 		5B52E0042A935E4100243A73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B52E0022A935E4100243A73 /* LaunchScreen.storyboard */; };
 		5B52E00D2A93636D00243A73 /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E00C2A93636D00243A73 /* RickAndMorty.swift */; };
 		5B52E0112A9363EC00243A73 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E0102A9363EC00243A73 /* NetworkManager.swift */; };
-		5B52E0142A9365A000243A73 /* CraracterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E0132A9365A000243A73 /* CraracterDetailViewController.swift */; };
+		5B52E0142A9365A000243A73 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E0132A9365A000243A73 /* CharacterDetailViewController.swift */; };
 		5B52E0162A936DEA00243A73 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E0152A936DEA00243A73 /* CharacterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		5B52E0052A935E4100243A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B52E00C2A93636D00243A73 /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
 		5B52E0102A9363EC00243A73 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		5B52E0132A9365A000243A73 /* CraracterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraracterDetailViewController.swift; sourceTree = "<group>"; };
+		5B52E0132A9365A000243A73 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		5B52E0152A936DEA00243A73 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5B52DFFB2A935E4000243A73 /* CharacterColectionViewController.swift */,
-				5B52E0132A9365A000243A73 /* CraracterDetailViewController.swift */,
+				5B52E0132A9365A000243A73 /* CharacterDetailViewController.swift */,
 				5B52E0152A936DEA00243A73 /* CharacterCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
@@ -181,7 +181,7 @@
 				5B52E00D2A93636D00243A73 /* RickAndMorty.swift in Sources */,
 				5B52DFFC2A935E4000243A73 /* CharacterColectionViewController.swift in Sources */,
 				5B52E0112A9363EC00243A73 /* NetworkManager.swift in Sources */,
-				5B52E0142A9365A000243A73 /* CraracterDetailViewController.swift in Sources */,
+				5B52E0142A9365A000243A73 /* CharacterDetailViewController.swift in Sources */,
 				5B52DFF82A935E4000243A73 /* AppDelegate.swift in Sources */,
 				5B52DFFA2A935E4000243A73 /* SceneDelegate.swift in Sources */,
 				5B52E0162A936DEA00243A73 /* CharacterCollectionViewCell.swift in Sources */,
@@ -328,7 +328,7 @@
 				INFOPLIST_FILE = RickAndMorty1221/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -360,7 +360,7 @@
 				INFOPLIST_FILE = RickAndMorty1221/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

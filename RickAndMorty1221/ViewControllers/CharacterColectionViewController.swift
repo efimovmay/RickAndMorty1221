@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterColectionViewController: UIViewController {
+final class CharacterColectionViewController: UIViewController {
     
     private var allCharacter: AllCharacter?
 
@@ -24,7 +24,7 @@ class CharacterColectionViewController: UIViewController {
     // MARK: - Navigation
     @objc
     private func goToDetailViewController() {
-        let detailVC = CraracterDetailViewController()
+        let detailVC = CharacterDetailViewController()
         present(detailVC, animated: true)
     }
     
@@ -47,8 +47,8 @@ class CharacterColectionViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        title = "Rick & Morty"
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        title = "Characters"
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
@@ -69,6 +69,11 @@ extension CharacterColectionViewController: UICollectionViewDelegate, UICollecti
         cell.layer.cornerRadius = 20
         cell.configure(whith: character)
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = CharacterDetailViewController()
+        detailVC.character = allCharacter?.results[indexPath.row]
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 

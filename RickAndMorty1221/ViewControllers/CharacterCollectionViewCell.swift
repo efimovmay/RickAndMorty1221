@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CharacterCollectionViewCell: UICollectionViewCell {
-    let imageCharacter = UIImageView()
-    let nameCharacter = UILabel()
+final class CharacterCollectionViewCell: UICollectionViewCell {
+    private let imageCharacter = UIImageView()
+    private let nameCharacter = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureImage() {
+    private func configureImage() {
         imageCharacter.layer.masksToBounds = true
         imageCharacter.layer.cornerRadius = 10
         
@@ -35,7 +35,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
         imageCharacter.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
     
-    func configureName() {
+    private func configureName() {
         nameCharacter.numberOfLines = 0
         nameCharacter.textColor = .white
         nameCharacter.textAlignment = .center
