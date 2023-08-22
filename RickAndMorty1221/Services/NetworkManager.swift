@@ -19,10 +19,10 @@ enum NetworkError: Error {
     case decodingError
 }
 
-class NetworkManger {
+class NetworkManger: ObservableObject {
     static let shared = NetworkManger()
     
-    private init() {}
+    init() {}
     
     func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else {

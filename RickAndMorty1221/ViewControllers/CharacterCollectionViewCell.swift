@@ -47,7 +47,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(whith character: Character) {
-        nameCharacter.text = character.name ?? ""
+        nameCharacter.text = character.name
         NetworkManger.shared.fetchImage(from: character.image) { [weak self] result in
             switch result {
             case .success(let imageData):

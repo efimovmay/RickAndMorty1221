@@ -6,28 +6,23 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class CharacterColectionViewController: UIViewController {
     
     private var allCharacter: AllCharacter?
-
-    var collectionView: UICollectionView!
+//    var episodesCaracter: [Episode] = []
+    
+    private var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 4/256, green: 12/256, blue: 30/256, alpha: 1)
+        
         setupNavigationBar()
         setupCollectionView()
         fetchCharacter(from: link.allCharacter.rawValue)
     }
-    
-    // MARK: - Navigation
-    @objc
-    private func goToDetailViewController() {
-        let detailVC = CharacterDetailViewController()
-        present(detailVC, animated: true)
-    }
-    
+
     // MARK: - SetupUI
     private func setupCollectionView() {
 
@@ -48,8 +43,18 @@ final class CharacterColectionViewController: UIViewController {
     
     private func setupNavigationBar() {
         title = "Characters"
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = UIColor(
+            red: 21/255,
+            green: 32/255,
+            blue: 66/255,
+            alpha: 0.7
+        )
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barStyle = .default
     }
 }
 
@@ -71,9 +76,16 @@ extension CharacterColectionViewController: UICollectionViewDelegate, UICollecti
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailVC = CharacterDetailViewController()
-        detailVC.character = allCharacter?.results[indexPath.row]
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        let currentCharacter = allCharacter?.results[indexPath.row]
+        
+//        guard let episodes = currentCharacter?.episode else { return }
+//        for episode in episodes {
+//            fetchEpisodes(from: episode)
+//        }
+        
+        let detaiVC = CharacterDetailView(character: currentCharacter)
+        let host = UIHostingController(rootView: detaiVC)
+        self.navigationController?.pushViewController(host, animated: true)
     }
 }
 
@@ -100,6 +112,7 @@ extension CharacterColectionViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - Networking
 
 extension CharacterColectionViewController {
+    
     func fetchCharacter(from link: String) {
         NetworkManger.shared.fetch(dataType: AllCharacter.self, from: link) { [weak self] result in
             switch result {
@@ -111,4 +124,5 @@ extension CharacterColectionViewController {
             }
         }
     }
+
 }
