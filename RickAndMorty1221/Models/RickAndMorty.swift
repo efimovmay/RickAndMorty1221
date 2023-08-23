@@ -31,15 +31,6 @@ struct Character: Decodable {
     let episode: [String]
     let url: String
     let created: String
-    
-    var description: String {
-        """
-        Status: \(status)
-        Species \(species)
-        Type: \(type)
-        Gender: \(gender)
-        """
-    }
 }
 
 struct Episode: Decodable, Hashable {
@@ -47,13 +38,6 @@ struct Episode: Decodable, Hashable {
     let date: String
     let episode: String
     let characters: [String]
-    
-    var description: String {
-        """
-    Title: \(name)
-    Date: \(date)
-    """
-    }
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
