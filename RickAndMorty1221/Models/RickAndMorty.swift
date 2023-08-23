@@ -34,17 +34,9 @@ struct Character: Decodable {
 }
 
 struct Episode: Decodable, Hashable {
-    let name: String
-    let date: String
-    let episode: String
-    let characters: [String]
-    
-    enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case date = "air_date"
-        case episode = "episode"
-        case characters = "characters"
-    }
+    let name: String?
+    let air_date: String?
+    let episode: String?
 }
 
 struct Origin: Decodable {

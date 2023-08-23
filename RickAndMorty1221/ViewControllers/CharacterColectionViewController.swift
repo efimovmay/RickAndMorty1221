@@ -11,7 +11,6 @@ import SwiftUI
 final class CharacterColectionViewController: UIViewController {
     
     private var allCharacter: AllCharacter?
-//    var episodesCaracter: [Episode] = []
     
     private var collectionView: UICollectionView!
     
@@ -23,7 +22,8 @@ final class CharacterColectionViewController: UIViewController {
         fetchCharacter(from: link.allCharacter.rawValue)
     }
 
-    // MARK: - SetupUI
+// MARK: - SetupUI
+    
     private func setupCollectionView() {
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -58,7 +58,8 @@ final class CharacterColectionViewController: UIViewController {
     }
 }
 
-    // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+
 extension CharacterColectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,11 +79,6 @@ extension CharacterColectionViewController: UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let currentCharacter = allCharacter?.results[indexPath.row]
         
-//        guard let episodes = currentCharacter?.episode else { return }
-//        for episode in episodes {
-//            fetchEpisodes(from: episode)
-//        }
-        
         let detaiVC = CharacterDetailView(character: currentCharacter)
         let host = UIHostingController(rootView: detaiVC)
         self.navigationController?.pushViewController(host, animated: true)
@@ -90,6 +86,7 @@ extension CharacterColectionViewController: UICollectionViewDelegate, UICollecti
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
+
 extension CharacterColectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberCellInRow: CGFloat = 2
@@ -124,5 +121,4 @@ extension CharacterColectionViewController {
             }
         }
     }
-
 }

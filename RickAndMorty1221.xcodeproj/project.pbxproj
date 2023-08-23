@@ -19,6 +19,8 @@
 		5B52E03B2A95AC2100243A73 /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E03A2A95AC2100243A73 /* HeadView.swift */; };
 		5B52E03D2A95AC9D00243A73 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E03C2A95AC9D00243A73 /* InfoView.swift */; };
 		5B52E0402A95AD3800243A73 /* OriginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E03F2A95AD3800243A73 /* OriginView.swift */; };
+		5B52E0422A95D53000243A73 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E0412A95D53000243A73 /* EpisodesView.swift */; };
+		5B52E0442A95D64800243A73 /* FetchEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52E0432A95D64800243A73 /* FetchEpisode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		5B52E03A2A95AC2100243A73 /* HeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadView.swift; sourceTree = "<group>"; };
 		5B52E03C2A95AC9D00243A73 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		5B52E03F2A95AD3800243A73 /* OriginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginView.swift; sourceTree = "<group>"; };
+		5B52E0412A95D53000243A73 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		5B52E0432A95D64800243A73 /* FetchEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEpisode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5B52E0102A9363EC00243A73 /* NetworkManager.swift */,
+				5B52E0432A95D64800243A73 /* FetchEpisode.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				5B52E03A2A95AC2100243A73 /* HeadView.swift */,
 				5B52E03C2A95AC9D00243A73 /* InfoView.swift */,
 				5B52E03F2A95AD3800243A73 /* OriginView.swift */,
+				5B52E0412A95D53000243A73 /* EpisodesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,10 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B52E0442A95D64800243A73 /* FetchEpisode.swift in Sources */,
 				5B52E00D2A93636D00243A73 /* RickAndMorty.swift in Sources */,
 				5B52DFFC2A935E4000243A73 /* CharacterColectionViewController.swift in Sources */,
 				5B52E0402A95AD3800243A73 /* OriginView.swift in Sources */,
 				5B52E0112A9363EC00243A73 /* NetworkManager.swift in Sources */,
+				5B52E0422A95D53000243A73 /* EpisodesView.swift in Sources */,
 				5B52DFF82A935E4000243A73 /* AppDelegate.swift in Sources */,
 				5B52DFFA2A935E4000243A73 /* SceneDelegate.swift in Sources */,
 				5B52E0162A936DEA00243A73 /* CharacterCollectionViewCell.swift in Sources */,
