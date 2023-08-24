@@ -23,11 +23,18 @@ struct EpisodesView: View {
             Spacer()
         }.onAppear() {
             for linkEpisode in character.episode {
-                FetchEpisode().getDate(from: linkEpisode) { (results) in
-                    self.episodes.append(results)
+                NetworkManger().fetch(dataType: Episode.self, from: linkEpisode)
+                    { result in
+                        switch result {
+                        case .success(let result):
+                            self.episodes.append(result)
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
                 }
             }
-        }
+        
         ForEach(episodes, id: \.self) { episode in
             ZStack {
                 Rectangle()

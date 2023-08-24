@@ -54,7 +54,7 @@ final class CharacterColectionViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barStyle = .default
+        navigationItem.backButtonDisplayMode = .minimal
     }
 }
 
