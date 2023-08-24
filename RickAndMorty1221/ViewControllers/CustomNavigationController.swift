@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCustomNavigationController: UINavigationController {
+class navigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if #available(iOS 13.0, *) {
             return .darkContent
@@ -24,6 +24,6 @@ class MyCustomNavigationController: UINavigationController {
         let backBarButton = UIBarButtonItem(title: "",
                                             style: .plain,
                                             target: nil, action: nil)
-        navigationItem.backBarButtonItem = backBarButton
+        self.navigationItem.backBarButtonItem = backBarButton
     }
 }

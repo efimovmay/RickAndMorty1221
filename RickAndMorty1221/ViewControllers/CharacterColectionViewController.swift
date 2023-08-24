@@ -46,6 +46,7 @@ final class CharacterColectionViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
+        self.navigationController?.navigationBar.barStyle = .default
         title = "Characters"
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -59,6 +60,8 @@ final class CharacterColectionViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barStyle = .default
+        navigationItem.backButtonDisplayMode = .minimal
+
     }
 }
 
