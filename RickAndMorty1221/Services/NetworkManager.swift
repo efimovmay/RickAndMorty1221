@@ -19,7 +19,7 @@ enum NetworkError: Error {
     case decodingError
 }
 
-class NetworkManger {
+class NetworkManger: ObservableObject {
     static let shared = NetworkManger()
     
     init() {}

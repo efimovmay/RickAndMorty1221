@@ -14,6 +14,10 @@ final class CharacterColectionViewController: UIViewController {
     
     private var collectionView: UICollectionView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
