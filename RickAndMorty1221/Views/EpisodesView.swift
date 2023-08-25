@@ -22,17 +22,7 @@ struct EpisodesView: View {
                 .padding(.leading, 24.0)
             Spacer()
         }.onAppear() {
-            for linkEpisode in character.episode {
-                NetworkManger().fetch(dataType: Episode.self, from: linkEpisode)
-                    { result in
-                        switch result {
-                        case .success(let result):
-                            self.episodes.append(result)
-                        case .failure(let error):
-                            print(error)
-                        }
-                    }
-                }
+            fetchEpisode()
             }
         
         ForEach(episodes, id: \.self) { episode in
@@ -58,6 +48,20 @@ struct EpisodesView: View {
                 }
                 .padding(.horizontal, 16.0)
             }.padding(.horizontal, 20)
+        }
+    }
+    
+    func fetchEpisode() {
+        for linkEpisode in character.episode {
+            NetworkManger().fetch(dataType: Episode.self, from: linkEpisode)
+                { result in
+                    switch result {
+                    case .success(let result):
+                        self.episodes.append(result)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
         }
     }
 }
