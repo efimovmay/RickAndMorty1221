@@ -34,7 +34,10 @@ final class CharacterColectionViewController: UIViewController {
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        collectionView.backgroundColor = UIColor(red: 4/256, green: 12/256, blue: 30/256, alpha: 1)
+        collectionView.backgroundColor = UIColor(red: 4/256,
+                                                 green: 12/256,
+                                                 blue: 30/256,
+                                                 alpha: 1)
         
         collectionView.register(CharacterCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
@@ -71,7 +74,10 @@ extension CharacterColectionViewController: UICollectionViewDelegate, UICollecti
         else { return UICollectionViewCell() }
         
         guard let character = allCharacter?.results[indexPath.row] else { return UICollectionViewCell() }
-        cell.backgroundColor = UIColor(red: 38/256, green: 42/256, blue: 56/256, alpha: 1)
+        cell.backgroundColor = UIColor(red: 38/256,
+                                       green: 42/256,
+                                       blue: 56/256,
+                                       alpha: 1)
         cell.layer.cornerRadius = 20
         cell.configure(whith: character)
         return cell
