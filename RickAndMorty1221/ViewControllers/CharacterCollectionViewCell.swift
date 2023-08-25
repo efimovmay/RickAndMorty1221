@@ -10,6 +10,7 @@ import UIKit
 final class CharacterCollectionViewCell: UICollectionViewCell {
     private let imageCharacter = UIImageView()
     private let nameCharacter = UILabel()
+    private let activityIndocator = UIActivityIndicatorView(style: .large)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,10 +19,20 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         
         addSubview(nameCharacter)
         configureName()
+        
+        configureActivityIndicator()
+
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configureActivityIndicator() {
+        activityIndocator.hidesWhenStopped = true
+        activityIndocator.startAnimating()
+        activityIndocator.center = CGPoint(x: frame.width/2, y: frame.height/2)
+        addSubview(activityIndocator)
     }
     
     private func configureImage() {
@@ -52,6 +63,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
             switch result {
             case .success(let imageData):
                 self?.imageCharacter.image = UIImage(data: imageData)
+                self?.activityIndocator.stopAnimating()
             case .failure(let error):
                 print(error)
             }
