@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2441182A9F6A68002CBC3D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2441172A9F6A68002CBC3D /* Colors.swift */; };
 		5B3B2DA52A97F8450047827B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B2DA42A97F8450047827B /* CustomNavigationController.swift */; };
 		5B52DFF82A935E4000243A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52DFF72A935E4000243A73 /* AppDelegate.swift */; };
 		5B52DFFA2A935E4000243A73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52DFF92A935E4000243A73 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B2441172A9F6A68002CBC3D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5B3B2DA42A97F8450047827B /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		5B52DFF42A935E4000243A73 /* RickAndMorty1221.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty1221.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B52DFF72A935E4000243A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5B52E00C2A93636D00243A73 /* RickAndMorty.swift */,
+				5B2441172A9F6A68002CBC3D /* Colors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				5B52DFF82A935E4000243A73 /* AppDelegate.swift in Sources */,
 				5B52DFFA2A935E4000243A73 /* SceneDelegate.swift in Sources */,
 				5B52E0162A936DEA00243A73 /* CharacterCollectionViewCell.swift in Sources */,
+				5B2441182A9F6A68002CBC3D /* Colors.swift in Sources */,
 				5B52E03B2A95AC2100243A73 /* HeadView.swift in Sources */,
 				5B52E03D2A95AC9D00243A73 /* InfoView.swift in Sources */,
 				5B52E0182A93FD7500243A73 /* CharacterDetailView.swift in Sources */,
