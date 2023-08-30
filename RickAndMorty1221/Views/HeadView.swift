@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HeadView: View {
     let character: Character
-    let greenColor: Color
     
     var body: some View {
         AsyncImage(
@@ -30,7 +29,7 @@ struct HeadView: View {
         
         Text(character.status)
             .font(.system(size: 16))
-            .foregroundColor(greenColor)
+            .foregroundColor(Color(Colors.greenTextColor.getColor()))
             .padding(.bottom, 20.0)
     }
 }

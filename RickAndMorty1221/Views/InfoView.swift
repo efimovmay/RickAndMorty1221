@@ -9,7 +9,6 @@ import SwiftUI
 
 struct InfoView: View {
     let character: Character
-    let grayColor: Color
     
     var body: some View {
         HStack {
@@ -22,7 +21,7 @@ struct InfoView: View {
         ZStack {
             Rectangle()
                 .frame(height: 124)
-                .foregroundColor(grayColor)
+                .foregroundColor(Color(Colors.viewsColor.getColor()))
                 .cornerRadius(16)
             VStack (spacing: 16) {
                 HStack {

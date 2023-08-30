@@ -23,10 +23,10 @@ struct CharacterDetailView: View {
                 ScrollView {
 
                 VStack {
-                    HeadView(character: character, greenColor: greenColor)
-                    InfoView(character: character, grayColor: grayColor)
-                    OriginView(character: character, greenColor: greenColor, grayColor: grayColor)
-                    EpisodesView(character: character, greenColor: greenColor, grayColor: grayColor)
+                    HeadView(character: character)
+                    InfoView(character: character)
+                    OriginView(character: character)
+                    EpisodesView(character: character)
                 }
             }
         }

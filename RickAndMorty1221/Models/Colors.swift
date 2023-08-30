@@ -11,7 +11,6 @@ enum Colors {
     case backgroundColor
     case navBarColor
     case viewsColor
-    case grayTextColor
     case greenTextColor
     
     func getColor() -> UIColor {
@@ -30,11 +29,6 @@ enum Colors {
             return UIColor(red: 38/256,
                            green: 42/256,
                            blue: 56/256,
-                           alpha: 1)
-        case .grayTextColor:
-            return UIColor(red: 147/256,
-                           green: 152/256,
-                           blue: 156/256,
                            alpha: 1)
         case .greenTextColor:
             return UIColor(red: 71/256,

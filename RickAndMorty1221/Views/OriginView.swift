@@ -9,8 +9,6 @@ import SwiftUI
 
 struct OriginView: View {
     let character: Character
-    let greenColor: Color
-    let grayColor: Color
     
     var body: some View {
         HStack {
@@ -23,7 +21,7 @@ struct OriginView: View {
         ZStack {
             Rectangle()
                 .frame(height: 80)
-                .foregroundColor(grayColor)
+                .foregroundColor(Color(Colors.viewsColor.getColor()))
                 .cornerRadius(16)
             HStack {
                 ZStack {
@@ -43,7 +41,7 @@ struct OriginView: View {
                     HStack {
                         Text("Planet")
                             .font(.system(size: 16))
-                            .foregroundColor(greenColor)
+                            .foregroundColor(Color(Colors.greenTextColor.getColor()))
                         Spacer()
                     }
                 }

@@ -9,8 +9,6 @@ import SwiftUI
 
 struct EpisodesView: View {
     let character: Character
-    let greenColor: Color
-    let grayColor: Color
     
     @State var episodes = [Episode]()
     
@@ -29,7 +27,7 @@ struct EpisodesView: View {
             ZStack {
                 Rectangle()
                     .frame(height: 86)
-                    .foregroundColor(grayColor)
+                    .foregroundColor(Color(Colors.viewsColor.getColor()))
                     .cornerRadius(16)
                 VStack (spacing: 10) {
                     HStack {
@@ -40,7 +38,7 @@ struct EpisodesView: View {
                     }
                     HStack {
                         Text(episode.episode ?? "")
-                            .foregroundColor(greenColor)
+                            .foregroundColor(Color(Colors.greenTextColor.getColor()))
                         Spacer()
                         Text(episode.air_date ?? "")
                             .foregroundColor(.gray)
