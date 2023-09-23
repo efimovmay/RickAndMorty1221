@@ -4,4 +4,4 @@
 
 Приложение написано на архитектуре MVC, загрузка данных URLSession, первый экран UIKit(верстка кодом), второй SwiftUI.
 
-![Image alt](https://github.com/efimovmay/RickAndMorty1221/blob/main/firstScreen.png) ![Image alt](https://github.com/efimovmay/RickAndMorty1221/blob/main/secindScreen.png)
+![Image alt](https://github.com/efimovmay/RickAndMorty1221/blob/main/rec.gif)
