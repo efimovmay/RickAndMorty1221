@@ -19,7 +19,7 @@ struct EpisodesView: View {
                 .foregroundColor(.white)
                 .padding(.leading, 24.0)
             Spacer()
-        }.onAppear() {
+        }.task() {
             fetchEpisode()
             }
         
