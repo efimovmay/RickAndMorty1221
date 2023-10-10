@@ -7,4 +7,5 @@
 ## Стек
 UIKit(main screen), swiftUI(detail screen), MVC, URLSession, JSON, API.
 
+## Prewiew
 ![Image alt](https://github.com/efimovmay/RickAndMorty1221/blob/main/rec.gif)
